@@ -1,0 +1,12 @@
+.hidden {
+  display: none;
+}
+
+.visible-block {
+  display: block;
+}
+
+@import 'scss/layout';
+@import 'app/widgets/list';
+@import 'app/widgets/filter';
+

@@ -1,0 +1,64 @@
+.container {
+  display: flex;
+}
+
+.controls-container {
+  width: 300px;
+  padding: 30px;
+  background-color: lightyellow;
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+  z-index: 1;
+}
+
+.map-container {
+  flex: 1;
+  height: 100vh;
+}
+
+#states-autocomplete {
+  font-size: 1em;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+#map {
+  height: 100%;
+}
+
+// Google Nexus 5
+@media only screen
+and (min-width: 360px)
+and (orientation: portrait)
+and (-webkit-min-device-pixel-ratio: 3.0) {
+  .container {
+    flex-direction: column;
+  }
+  .controls-container  {
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+    order: 1;
+  }
+  .map-container {
+    order: 0;
+    height: 50vh;
+  }
+}
+
+// iPhone 6+
+@media only screen
+  and (min-device-width: 414px)
+  and (max-device-width: 736px)
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: portrait) {
+
+  .container {
+    flex-direction: column;
+  }
+  .controls-container  {
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+    order: 1;
+  }
+  .map-container {
+    order: 0;
+    height: 50vh;
+  }
+}
